@@ -13,3 +13,9 @@ app.use(express.urlencoded({extended:"true"}))
 app.use(express.static("public"))
 
 app.use(cookieParser())
+
+//routes
+import {router} from './routes/user.route.js'
+//routes declaration 
+
+app.use("/users",router)
